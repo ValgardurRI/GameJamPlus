@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerCharacter : PlanetCharacter, IDamageable
 {
+    public float StartPosition = 0;
     public float MaxSpeed;
     public float Acceleration = 10;
     public float Friction = 10;
@@ -15,7 +16,11 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+=======
+        SetPosition(StartPosition);
+>>>>>>> ba3f8c259c594f4d6b38a813ba322f53d21d2493
     }
 
 

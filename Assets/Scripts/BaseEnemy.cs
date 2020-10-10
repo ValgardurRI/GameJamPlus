@@ -8,6 +8,7 @@ public abstract class BaseEnemy : PlanetCharacter, IDamageable
     public float AttackRange;
     public float Speed;
     public float MaxHealth = 100;
+    public float StartPosition;
     protected IDamageable target;
     protected float currentHealth;
     protected float velocity = 0;
@@ -16,6 +17,7 @@ public abstract class BaseEnemy : PlanetCharacter, IDamageable
     public virtual void Start()
     {
         currentHealth = MaxHealth;
+        SetPosition(StartPosition);
         target = GetClosestTarget();
     }
 
