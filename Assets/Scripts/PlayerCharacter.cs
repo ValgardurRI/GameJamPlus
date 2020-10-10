@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerCharacter : PlanetCharacter
 {
+    public float MaxSpeed;
+    public float Acceleration = 10;
+    public float Friction = 10;
     float velocity = 0;
     private float movementDirection = 0;
     // Start is called before the first frame update
@@ -18,7 +21,26 @@ public class PlayerCharacter : PlanetCharacter
     // Update is called once per frame
     void Update()
     {
-        Move(movementDirection*MaxSpeed);
+        if(movementDirection != 0)
+        {
+            // If the character registers movement, add acceleration
+            velocity += Acceleration*movementDirection;
+        }
+        else
+        {
+            // Otherwise start slowing the character
+            if(Mathf.Abs(velocity) < Friction)
+            {
+                velocity = 0;
+            }
+            else
+            {
+                velocity += velocity < 0 ? Friction : -Friction;
+            }
+        }
+
+        velocity = Mathf.Clamp(velocity, -MaxSpeed, MaxSpeed);
+        Move(velocity);
     }
 
     public void OnMove(InputValue value)
