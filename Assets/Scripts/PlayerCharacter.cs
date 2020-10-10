@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
-public class PlayerCharacter : PlanetCharacter
+public class PlayerCharacter : PlanetCharacter, IDamageable
 {
     public float MaxSpeed;
     public float Acceleration = 10;
@@ -49,5 +49,14 @@ public class PlayerCharacter : PlanetCharacter
         // the action is bound to.
         movementDirection = value.Get<Vector2>().x;
     }
-       
+
+    public void TakeDamage(float value)
+    {
+        
+    }
+
+    public float GetPlanetaryPosition()
+    {
+        return Rotation;
+    }
 }
