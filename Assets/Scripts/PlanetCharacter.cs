@@ -3,34 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerInput))]
 public class PlanetCharacter : MonoBehaviour
 {
-    public float Speed = 100;
+    public float MaxSpeed = 100;
     public float Rotation => transform.rotation.z;
-    private float velocity = 0;
-    // Start is called before the first frame update
-    void Start()
+
+
+    // Call this every update
+    public void Move(float velocity)
     {
-        
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        transform.Rotate(Vector3.back*Speed*Time.deltaTime*velocity);
-    }
-
-    public void OnMove(InputValue value)
-    {
-        // Read value from control. The type depends on what type of controls.
-        // the action is bound to.
-        velocity = value.Get<Vector2>().x;
-
-        // IMPORTANT: The given InputValue is only valid for the duration of the callback.
-        //            Storing the InputValue references somewhere and calling Get<T>()
-    }
-       
+        velocity = Mathf.Clamp(velocity, -MaxSpeed, MaxSpeed);
+        var rotation = Time.deltaTime*velocity;
+        transform.RotateAround(transform.parent.position, Vector3.back, rotation);
+    }  
 }

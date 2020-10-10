@@ -6,7 +6,7 @@ public class Planet : MonoBehaviour
 {
     private static Planet _instance;
     public static Planet Instance => _instance;
-    public float radius;
+    public float Radius => transform.localScale.x;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -14,6 +14,6 @@ public class Planet : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             _instance = this;
-        }        
+        }
     }
 }
