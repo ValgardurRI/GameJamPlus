@@ -11,10 +11,11 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     public float Friction = 10;
     float velocity = 0;
     private float movementDirection = 0;
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
 
@@ -41,6 +42,8 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
         velocity = Mathf.Clamp(velocity, -MaxSpeed, MaxSpeed);
         Move(velocity);
+        SetSpriteDirection();
+
     }
 
     public void OnMove(InputValue value)
@@ -48,6 +51,7 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
         // Read value from control. The type depends on what type of controls.
         // the action is bound to.
         movementDirection = value.Get<Vector2>().x;
+
     }
 
     public void TakeDamage(float value)
@@ -58,5 +62,18 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     public float GetPlanetaryPosition()
     {
         return Rotation;
+    }
+
+    void SetSpriteDirection()
+    {
+        if (velocity > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (velocity < 0)
+        {
+            spriteRenderer.flipX = true;
+
+        }
     }
 }

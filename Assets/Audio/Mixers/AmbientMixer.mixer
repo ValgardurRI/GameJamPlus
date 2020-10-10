@@ -6,8 +6,9 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AmbientMixe
-  m_OutputGroup: {fileID: 0}
+  m_Name: AmbientMixer
+  m_OutputGroup: {fileID: 6472678293909730754, guid: c7b1026083d584fe5a19a51c8aa64556,
+    type: 2}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
@@ -16,7 +17,10 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters: []
-  m_AudioMixerGroupViews: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - a60563e51c7f7400cb22af4ee412147e
+    name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
