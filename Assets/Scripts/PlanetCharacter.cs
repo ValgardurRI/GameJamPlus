@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlanetCharacter : MonoBehaviour
 {
-    public float Rotation => transform.rotation.z;
+    public float Rotation => transform.rotation.y;
 
 
     // Call this every update
