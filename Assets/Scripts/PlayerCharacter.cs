@@ -16,11 +16,8 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-=======
         SetPosition(StartPosition);
->>>>>>> ba3f8c259c594f4d6b38a813ba322f53d21d2493
     }
 
 
