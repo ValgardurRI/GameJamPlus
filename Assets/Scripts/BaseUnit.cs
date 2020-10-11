@@ -11,7 +11,6 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
     public float AttackRange;
     public float Speed;
     public float MaxHealth = 100;
-    public float StartPosition;
     public float AttackDamage = 10;
     public float SecondsPerAttack = 10;
     public Team Team;
@@ -29,7 +28,6 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
     {
         animator = GetComponentInChildren<Animator>();
         currentHealth = MaxHealth;
-        SetPosition(StartPosition);
         target = GetClosestTarget();
         if((target = GetClosestTarget()) != null)
             targetTransform = target.GetTransform();

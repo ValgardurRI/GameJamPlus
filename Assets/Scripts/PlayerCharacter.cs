@@ -12,6 +12,10 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     public float Acceleration = 10;
     public float Friction = 10;
     public Team Team;
+    public TimedPlant RangedPlantPrefab;
+    public TimedPlant MeleePlantPrefab;
+    public TimedPlant ForestationPlantPrefab;
+
     float velocity = 0;
     [SerializeField]
     private float movementDirection = 0;
@@ -81,21 +85,27 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
     public void PlantForestation()
     {
-
+        var parent = Team == Team.Nature ? Planet.Instance.NatureUnits : Planet.Instance.RobotUnits;
+        var plant = Instantiate(ForestationPlantPrefab, parent);
+        plant.SetPosition(Rotation);
     }
 
     public void PlantMelee()
     {
-
+        var parent = Team == Team.Nature ? Planet.Instance.NatureUnits : Planet.Instance.RobotUnits;
+        var plant = Instantiate(MeleePlantPrefab, parent);
+        plant.SetPosition(Rotation);
     }
 
     public void PlantTurret()
     {
-
+        var parent = Team == Team.Nature ? Planet.Instance.NatureUnits : Planet.Instance.RobotUnits;
+        var plant = Instantiate(RangedPlantPrefab, parent);
+        plant.SetPosition(Rotation);
     }
 
     public void Attack()
     {
-        
+
     }
 }

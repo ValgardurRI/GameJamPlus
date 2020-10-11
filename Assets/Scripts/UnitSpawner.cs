@@ -40,7 +40,7 @@ public class UnitSpawner : PlanetCharacter
             {
                 var parent = Team == Team.Nature ? Planet.Instance.NatureUnits : Planet.Instance.RobotUnits;
                 var unit = Instantiate(Spawnables[i].UnitPrefab, parent);
-                unit.StartPosition = StartPosition;
+                unit.SetPosition(StartPosition);
                 spawnedUnits.Add(unit);
                 Spawnables[i].spawnTimer = Spawnables[i].SpawnRate;
             }
