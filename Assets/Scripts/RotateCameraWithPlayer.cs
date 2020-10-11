@@ -10,7 +10,7 @@ public class RotateCameraWithPlayer : MonoBehaviour
     void Update()
     {
         var tempAngles = transform.eulerAngles;
-        tempAngles.z = player.transform.localEulerAngles.y;
+        tempAngles.z = player.transform.localEulerAngles.z;
         transform.eulerAngles = tempAngles;
     }
 }

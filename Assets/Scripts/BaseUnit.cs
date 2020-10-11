@@ -14,6 +14,7 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
     public float SecondsPerAttack = 10;
     public Team Team;
 
+    public Transform targetTransform;
     protected IDamageable target;
     protected float currentHealth;
     protected float velocity = 0;
@@ -26,6 +27,8 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
         currentHealth = MaxHealth;
         SetPosition(StartPosition);
         target = GetClosestTarget();
+        if((target = GetClosestTarget()) != null)
+            targetTransform = target.GetTransform();
     }
 
     public virtual void Update()
@@ -36,8 +39,9 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
         targetCheckTimer -= Time.deltaTime;
         if(target == null || targetCheckTimer <= 0)
         {
-            target = GetClosestTarget();
-            targetCheckTimer = 4f;
+            if((target = GetClosestTarget()) != null)
+                targetTransform = target?.GetTransform();
+            targetCheckTimer = 0.8f;
         }
     }
 
@@ -68,7 +72,7 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
         if(target == null)
             return false;
 
-        return Mathf.Abs(Rotation - target.GetPlanetaryPosition()) < AttackRange;
+        return PlanetaryDistance(Rotation, target.GetPlanetaryPosition()) < AttackRange;
     }
 
     protected float TargetDirection()
