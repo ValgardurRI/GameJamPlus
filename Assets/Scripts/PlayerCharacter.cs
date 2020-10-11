@@ -85,7 +85,9 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
     public void PlantForestation()
     {
-
+        var parent = Team == Team.Nature ? Planet.Instance.NatureUnits : Planet.Instance.RobotUnits;
+        var plant = Instantiate(ForestationPlantPrefab, parent);
+        plant.SetPosition(Rotation);
     }
 
     public void PlantMelee()
