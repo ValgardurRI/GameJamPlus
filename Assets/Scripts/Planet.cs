@@ -18,9 +18,11 @@ public class Planet : MonoBehaviour
     public Sprite NatureOctantSprite;
     public Sprite RobotOctantSprite;
 
-    private int[] octantForestationCount;
+    private int[] octantForestationCounts;
     private Transform octants;
-
+    private SceneLoader sceneLoader;
+    private string loseString= "Memories begin to fade";
+    private string winString = "The cycle of life and death continues";
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -28,12 +30,25 @@ public class Planet : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             _instance = this;
+            sceneLoader = FindObjectOfType<SceneLoader>();
             ForestationUnits = new List<ForestationUnit>();
-            octantForestationCount = new int[8];
+            octantForestationCounts = new int[8];
             NatureUnits = transform.Find("NatureUnits");
             RobotUnits = transform.Find("RobotUnits");
             octants = transform.Find("Octants");
         }
+    }
+
+    void EndgameCheck()
+    {
+        int natureOccupiedOctants = 0;
+        foreach(var count in octantForestationCounts)
+            if(count >= 2)
+                natureOccupiedOctants++;
+        if(natureOccupiedOctants >= 4)
+            sceneLoader.ReloadScene(winString);
+        else if(natureOccupiedOctants == 0)
+            sceneLoader.ReloadScene(loseString);
     }
 
     void Update()
@@ -45,22 +60,21 @@ public class Planet : MonoBehaviour
             return val;
         }
 
-        for(int i = 0; i < octantForestationCount.Length; i++)
+        for(int i = 0; i < octantForestationCounts.Length; i++)
         {
-            octantForestationCount[i] = 0;
+            octantForestationCounts[i] = 0;
         }
 
         foreach(var natureUnit in ForestationUnits)
         {
             var value = natureUnit.Team == Team.Nature ? 1 : -1 ;
-            octantForestationCount[rotationToOctant(natureUnit.Rotation)] += value;
+            octantForestationCounts[rotationToOctant(natureUnit.Rotation)] += value;
         }
 
-        for(int i = 0; i < octantForestationCount.Length; i++)
+        for(int i = 0; i < octantForestationCounts.Length; i++)
         {
-            var sprite = octantForestationCount[i] >= 2 ? NatureOctantSprite : RobotOctantSprite;
+            var sprite = octantForestationCounts[i] >= 2 ? NatureOctantSprite : RobotOctantSprite;
             octants.GetChild(i).GetComponent<SpriteRenderer>().sprite = sprite;
         }
-
     }
 }
