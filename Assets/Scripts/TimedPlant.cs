@@ -2,18 +2,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using static PlanetaryUtils;
 
-public class TimedPlant : PlanetCharacter
+public class TimedPlant : PlanetCharacter, IDamageable
 {
     public float SproutTime;
     public PlanetCharacter SpawnPrefab;
-    public List<Sprite> SproutStages;
     public Team team;
-    
+    public float MaxHealth;
+
     private float timeRemaining;
-    private SpriteRenderer spriteRenderer;
+    private float health; 
+
+    public float GetPlanetaryPosition()
+    {
+        return Rotation;
+    }
+
+    public Team GetTeam()
+    {
+        return team;
+    }
+
+    public Transform GetTransform()
+    {
+        return transform;
+    }
+
+    public void TakeDamage(float value, float sourceRotation)
+    {
+        health -= value;
+        if(health <= 0 && this != null)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
-        spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
+        health = MaxHealth;
         timeRemaining = SproutTime;
     }
 
@@ -22,7 +47,9 @@ public class TimedPlant : PlanetCharacter
         timeRemaining -= Time.deltaTime;
         if(timeRemaining <= 0)
         {
-            //Instantiate(SpawnPrefab, );
+            var parent = team == Team.Nature ? Planet.Instance.NatureUnits : Planet.Instance.RobotUnits;
+            var newPrefab = Instantiate(SpawnPrefab, parent);
+            newPrefab.SetPosition(Rotation);
             Destroy(gameObject);
         }
     }
