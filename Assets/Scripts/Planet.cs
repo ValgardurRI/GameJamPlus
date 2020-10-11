@@ -23,6 +23,7 @@ public class Planet : MonoBehaviour
     private SceneLoader sceneLoader;
     private string loseString= "Memories begin to fade";
     private string winString = "The cycle of life and death continues";
+    private bool ended = false;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -41,14 +42,25 @@ public class Planet : MonoBehaviour
 
     void EndgameCheck()
     {
-        int natureOccupiedOctants = 0;
-        foreach(var count in octantForestationCounts)
+        if(!ended)
+        {
+            int natureOccupiedOctants = 0;
+            foreach(var count in octantForestationCounts)
             if(count >= 2)
                 natureOccupiedOctants++;
-        if(natureOccupiedOctants >= 4)
-            sceneLoader.ReloadScene(winString);
-        else if(natureOccupiedOctants == 0)
-            sceneLoader.ReloadScene(loseString);
+
+            
+            if(natureOccupiedOctants >= 4)
+            {
+                ended = true;
+                sceneLoader.ReloadScene(winString);
+            }
+            else if(natureOccupiedOctants == 0)
+            {
+                ended = true;
+                sceneLoader.ReloadScene(loseString);
+            }
+        }
     }
 
     void Update()
@@ -56,7 +68,6 @@ public class Planet : MonoBehaviour
         int rotationToOctant(float rotation)
         {
             var val = Mathf.FloorToInt((rotation + 22.5f)/45) % 8;
-            Debug.Log(val);
             return val;
         }
 
@@ -76,5 +87,6 @@ public class Planet : MonoBehaviour
             var sprite = octantForestationCounts[i] >= 2 ? NatureOctantSprite : RobotOctantSprite;
             octants.GetChild(i).GetComponent<SpriteRenderer>().sprite = sprite;
         }
+        EndgameCheck();
     }
 }
