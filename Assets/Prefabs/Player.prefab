@@ -183,3 +183,4 @@ MonoBehaviour:
   Acceleration: 1
   Friction: 1.5
   Team: 0
+  movementDirection: 0

@@ -173,6 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83dbc323da2ec0242823733b10cb4b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionVFX: {fileID: 268872583895314383, guid: b8d9e9b86ea494aa9a4dda829d03d729,
+    type: 3}
   AttackRange: 2
   Speed: 20
   MaxHealth: 100

@@ -6,6 +6,8 @@ using static PlanetaryUtils;
 
 public abstract class BaseUnit : PlanetCharacter, IDamageable
 {
+    public GameObject ExplosionVFX;
+
     public float AttackRange;
     public float Speed;
     public float MaxHealth = 100;
@@ -55,6 +57,7 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
         currentHealth -= value;
         if (currentHealth <= 0 && this != null)
         {
+            Instantiate(ExplosionVFX, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
