@@ -63,7 +63,7 @@ public class CommandWheel : MonoBehaviour
         }
 
         var jumpCommandInput = Input.GetAxisRaw("Jump");
-        if(jumpCommandInput != 0 && selectedCommand.CommandCooldownTimer <= 0)
+        if(jumpCommandInput != 0 && selectedCommand.CommandCooldownTimer <= 0 && commandChangeTimer <= 0)
         {
             switch(selectedCommand.type)
             {
