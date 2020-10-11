@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlanetCharacter : MonoBehaviour
 {
-    public float Rotation => transform.localEulerAngles.y % 360;
+    public float Rotation => this != null ? transform.localEulerAngles.y % 360 : 0;
 
 
     // Call this every update
@@ -19,6 +19,6 @@ public class PlanetCharacter : MonoBehaviour
         var tempRotation = transform.eulerAngles;
         tempRotation.y = 0;
         transform.eulerAngles = tempRotation;
-        transform.RotateAround(transform.parent.position, Vector3.back, angle);
+        transform.RotateAround(transform.parent.position, Vector3.forward, angle);
     }
 }

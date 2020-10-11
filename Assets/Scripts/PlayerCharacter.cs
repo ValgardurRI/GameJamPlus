@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static PlanetaryUtils;
 
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerCharacter : PlanetCharacter, IDamageable
@@ -10,6 +11,7 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     public float MaxSpeed;
     public float Acceleration = 10;
     public float Friction = 10;
+    public Team Team;
     float velocity = 0;
     private float movementDirection = 0;
     private SpriteRenderer spriteRenderer;
@@ -56,14 +58,23 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
     }
 
-    public void TakeDamage(float value)
+    public void TakeDamage(float value, float sourceRotation)
     {
-        
+        velocity -= value*5* PlanetaryUtils.PlanetaryDirection(Rotation, sourceRotation);
     }
 
+    public Team GetTeam()
+    {
+        return Team;
+    }
     public float GetPlanetaryPosition()
     {
         return Rotation;
+    }
+
+    public Transform GetTransform()
+    {
+        return transform;
     }
 
     void SetSpriteDirection()
@@ -78,4 +89,5 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
         }
     }
+
 }
