@@ -176,9 +176,8 @@ MonoBehaviour:
   ExplosionVFX: {fileID: 268872583895314383, guid: b8d9e9b86ea494aa9a4dda829d03d729,
     type: 3}
   AttackRange: 2
-  Speed: 20
+  Speed: 10
   MaxHealth: 100
-  StartPosition: 90
   AttackDamage: 30
   SecondsPerAttack: 1
   Team: 1
