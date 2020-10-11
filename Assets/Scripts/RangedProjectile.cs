@@ -40,7 +40,6 @@ public class RangedProjectile : PlanetCharacter, IChildCollidable
         {
             if(damageable.GetTeam() != Team)
             {
-                Debug.Log(damageable.GetTransform().name);
                 damageable.TakeDamage(AttackDamage, Rotation);
                 Destroy(gameObject);
             }
