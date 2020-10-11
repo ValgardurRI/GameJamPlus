@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 40
   YDropoff: 1
-  AttackDamage: 40
+  AttackDamage: 50
   LifeTime: 1
 --- !u!1001 &2146792090121293080
 PrefabInstance:

@@ -187,6 +187,8 @@ MonoBehaviour:
   RangedPlantPrefab: {fileID: 0}
   MeleePlantPrefab: {fileID: 0}
   ForestationPlantPrefab: {fileID: 0}
+  ProjectilePrefab: {fileID: 1779294635857460958, guid: ea7a62821299744ca84d1dd8d2a69246,
+    type: 3}
   movementDirection: 0
 --- !u!1001 &6608957247636224396
 PrefabInstance:
