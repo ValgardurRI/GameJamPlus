@@ -7,6 +7,20 @@ public class Fader : MonoBehaviour
 
     CanvasGroup canvasGroup;
 
+    private void Awake()
+    {
+        var faders = FindObjectsOfType<Fader>();
+        if (faders.Length > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     private void Start()
     {
         canvasGroup = GetComponentInChildren<CanvasGroup>();

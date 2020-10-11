@@ -9,13 +9,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] float fadeInTime = 1f;
     [SerializeField] float waitTime = 0.5f;
 
-    Fader fader;
     int sceneToLoad;
-
-    private void Start()
-    {
-        fader = FindObjectOfType<Fader>();
-    }
 
     public void LoadNextScene()
     {
@@ -29,12 +23,24 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadScene(sceneToLoad));
     }
 
+    public void ReloadScene()
+    {
+        sceneToLoad = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadScene(sceneToLoad));
+    }
+
     private IEnumerator LoadScene(int sceneIndex)
     {
+
+        Fader fader = FindObjectOfType<Fader>();
+        DontDestroyOnLoad(gameObject);
+
         yield return fader.FadeOut(fadeOutTime);
         yield return SceneManager.LoadSceneAsync(sceneIndex);
         yield return new WaitForSeconds(waitTime);
         yield return fader.FadeIn(fadeInTime);
+
+        Destroy(gameObject);
     }
 
 
