@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3479ef7310493784ba6518e9ee3ab3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SproutTime: 5
+  SproutTime: 2
   SpawnPrefab: {fileID: 9060871462754714267, guid: 509571c0c5c4bd943afa44858cf93a79,
     type: 3}
   team: 0

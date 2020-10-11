@@ -17,6 +17,7 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
     public float Friction = 5;
     public float KnockbackWeight = 1;
     public Team Team;
+    public float InitialPosition = 0f;
 
     public Transform targetTransform;
     protected IDamageable target;
@@ -32,6 +33,8 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
         animator = GetComponentInChildren<Animator>();
         currentHealth = MaxHealth;
         target = GetClosestTarget();
+        if (InitialPosition != 0f)
+            SetPosition(InitialPosition);
         if((target = GetClosestTarget()) != null)
             targetTransform = target.GetTransform();
     }

@@ -37,8 +37,8 @@ public class CommandWheel : MonoBehaviour
     {
         player = Planet.Instance.GetComponentInChildren<PlayerCharacter>();
         commands= new List<Command>();
-        commands.Add(new Command(1, CommandType.PlantForestation));
-        commands.Add(new Command(5, CommandType.PlantMelee));
+        commands.Add(new Command(3, CommandType.PlantForestation));
+        commands.Add(new Command(3, CommandType.PlantMelee));
         commands.Add(new Command(5, CommandType.PlantTurret));
         commands.Add(new Command(5, CommandType.Attack));
         selectedCommand = commands[0];

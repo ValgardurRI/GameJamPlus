@@ -287,13 +287,14 @@ MonoBehaviour:
     type: 3}
   AttackRange: 35
   Speed: 0
-  MaxHealth: 100
+  MaxHealth: 200
   AttackDamage: 10
   SecondsPerAttack: 3
   Acceleration: 5
   Friction: 5
   KnockbackWeight: 100
   Team: 0
+  InitialPosition: 0
   targetTransform: {fileID: 0}
   projectilePrefab: {fileID: 1779294635857460958, guid: 09e93f147ab6a429784ad34490394804,
     type: 3}
