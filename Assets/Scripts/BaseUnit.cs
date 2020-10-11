@@ -57,7 +57,7 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
         currentHealth -= value;
         if (currentHealth <= 0 && this != null)
         {
-            Instantiate(ExplosionVFX, gameObject.transform);
+            Instantiate(ExplosionVFX, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
