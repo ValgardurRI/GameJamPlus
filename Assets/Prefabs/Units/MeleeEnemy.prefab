@@ -180,6 +180,9 @@ MonoBehaviour:
   MaxHealth: 100
   AttackDamage: 30
   SecondsPerAttack: 1
+  Acceleration: 5
+  Friction: 10
+  KnockbackWeight: 1
   Team: 1
   targetTransform: {fileID: 0}
 --- !u!50 &-5487747153253903592
