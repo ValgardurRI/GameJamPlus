@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0617c3cc11cd341bbbbf63e74db59ea6
+guid: 0fb6fdc7c1bce53489321eb9be628be2
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -29,51 +29,6 @@ TextureImporter:
   - first:
       213: 6068867470105603707
     second: protecc_earth_HUD_8
-  - first:
-      213: 7929401911616627684
-    second: protecc_earth_HUD_9
-  - first:
-      213: 2889866210398168351
-    second: protecc_earth_HUD_10
-  - first:
-      213: 7710634708172621124
-    second: protecc_earth_HUD_11
-  - first:
-      213: 146294876654956504
-    second: protecc_earth_HUD_12
-  - first:
-      213: -8701225795292004227
-    second: protecc_earth_HUD_13
-  - first:
-      213: 7664909777926634334
-    second: protecc_earth_HUD_14
-  - first:
-      213: 7137853517054891308
-    second: protecc_earth_HUD_15
-  - first:
-      213: -4300841764291426926
-    second: protecc_earth_HUD_16
-  - first:
-      213: -7374107285149358260
-    second: protecc_earth_HUD_17
-  - first:
-      213: 731767292012707394
-    second: protecc_earth_HUD_18
-  - first:
-      213: 5639128745715750695
-    second: protecc_earth_HUD_19
-  - first:
-      213: -8131387290760731980
-    second: protecc_earth_HUD_20
-  - first:
-      213: -1115301917039850850
-    second: protecc_earth_HUD_21
-  - first:
-      213: -6710387118670371880
-    second: protecc_earth_HUD_22
-  - first:
-      213: 6182433484117288788
-    second: protecc_earth_HUD_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,7 +91,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,7 +103,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -198,10 +153,10 @@ TextureImporter:
       name: protecc_earth_HUD_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
-        width: 16
-        height: 16
+        x: 1
+        y: 82
+        width: 13
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +174,10 @@ TextureImporter:
       name: protecc_earth_HUD_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 80
-        width: 16
-        height: 16
+        x: 17
+        y: 82
+        width: 13
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,7 +195,7 @@ TextureImporter:
       name: protecc_earth_HUD_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 80
         width: 16
         height: 16
@@ -261,10 +216,10 @@ TextureImporter:
       name: protecc_earth_HUD_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 80
-        width: 16
-        height: 16
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +237,10 @@ TextureImporter:
       name: protecc_earth_HUD_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 64
-        width: 16
-        height: 16
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,10 +258,10 @@ TextureImporter:
       name: protecc_earth_HUD_5
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 64
-        width: 16
-        height: 16
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,7 +279,7 @@ TextureImporter:
       name: protecc_earth_HUD_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 64
         width: 16
         height: 16
@@ -345,7 +300,7 @@ TextureImporter:
       name: protecc_earth_HUD_7
       rect:
         serializedVersion: 2
-        x: 48
+        x: 32
         y: 64
         width: 16
         height: 16
@@ -363,13 +318,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protecc_earth_HUD_9
+      name: protecc_earth_HUD_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e3663fd605ea0e60800000000000000
-      internalID: 7929401911616627684
+      spriteID: b7e61905fc2f83450800000000000000
+      internalID: 6068867470105603707
       vertices: []
       indices: 
       edges: []
@@ -386,7 +341,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 562a3e62ee66749d89117fef7a7fa90d
+    spriteID: ddcdd6694c219c34a8d8c7679647d65a
     internalID: 0
     vertices: []
     indices: 
