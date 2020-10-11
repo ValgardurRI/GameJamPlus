@@ -15,10 +15,11 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     public TimedPlant RangedPlantPrefab;
     public TimedPlant MeleePlantPrefab;
     public TimedPlant ForestationPlantPrefab;
-
+    public RangedProjectile ProjectilePrefab;
     float velocity = 0;
     [SerializeField]
     private float movementDirection = 0;
+    private float direction = 1f;
     private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
@@ -79,6 +80,7 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     {
         if(velocity != 0)
         {
+            direction = Mathf.Sign(velocity);
             spriteRenderer.flipX = velocity > 0;
         }
     }
@@ -106,6 +108,8 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
     public void Attack()
     {
-
+        var projectile = Instantiate(ProjectilePrefab, Planet.Instance.transform);
+        projectile.SetPosition(Rotation);
+        projectile.Setup(direction, Team);
     }
 }

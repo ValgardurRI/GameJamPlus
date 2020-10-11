@@ -179,9 +179,11 @@ MonoBehaviour:
   AttackRange: 20
   Speed: 10
   MaxHealth: 100
-  StartPosition: 0
   AttackDamage: 10
   SecondsPerAttack: 3
+  Acceleration: 5
+  Friction: 10
+  KnockbackWeight: 0.7
   Team: 0
   targetTransform: {fileID: 0}
   projectilePrefab: {fileID: 1779294635857460958, guid: e08aeb190d2a6094287632e3f074b6f6,

@@ -13,6 +13,9 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
     public float MaxHealth = 100;
     public float AttackDamage = 10;
     public float SecondsPerAttack = 10;
+    public float Acceleration = 5;
+    public float Friction = 5;
+    public float KnockbackWeight = 1;
     public Team Team;
 
     public Transform targetTransform;
@@ -45,6 +48,37 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
                 targetTransform = target?.GetTransform();
             targetCheckTimer = 0.8f;
         }
+
+        
+        if(this != null)
+        {
+            var direction = TargetDirection();
+            if(InAttackRange())
+                Attack();
+            else
+            {
+                if(direction != 0)
+                {
+                    // If the character registers movement, add acceleration
+                    velocity += Acceleration*direction;
+                }
+                else
+                {
+                    // Otherwise start slowing the character
+                    if(Mathf.Abs(velocity) < Friction)
+                    {
+                        velocity = 0;
+                    }
+                    else
+                    {
+                        velocity += velocity < 0 ? Friction : -Friction;
+                    }
+                }
+
+                velocity = Mathf.Clamp(velocity, -Speed, Speed);
+                Move(velocity);
+            }
+        }
     }
 
     public float GetPlanetaryPosition()
@@ -55,6 +89,7 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
     public void TakeDamage(float value, float sourceRotation)
     {
         currentHealth -= value;
+        velocity -= value*10*PlanetaryUtils.PlanetaryDirection(Rotation, sourceRotation)/KnockbackWeight;
         if (currentHealth <= 0 && this != null)
         {
             Instantiate(ExplosionVFX, transform.position, transform.rotation);

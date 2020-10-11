@@ -9,16 +9,9 @@ public class RangedUnit : BaseUnit
     public override void Update()
     {
         base.Update();
-
-        if(target != null)
-        {
-            velocity = TargetDirection()*Speed;
-            if(InAttackRange())
-                Attack();
-            else
-                Move(velocity);
-        }
     }
+
+    
 
     protected override void Attack()
     {
