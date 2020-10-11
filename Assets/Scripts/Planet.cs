@@ -20,7 +20,6 @@ public class Planet : MonoBehaviour
 
     private int[] octantForestationCounts;
     private Transform octants;
-    private SceneLoader sceneLoader;
     private string loseString= "Memories begin to fade";
     private string winString = "The cycle of life and death continues";
     private bool ended = false;
@@ -31,7 +30,6 @@ public class Planet : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             _instance = this;
-            sceneLoader = FindObjectOfType<SceneLoader>();
             ForestationUnits = new List<ForestationUnit>();
             octantForestationCounts = new int[8];
             NatureUnits = transform.Find("NatureUnits");
@@ -53,12 +51,12 @@ public class Planet : MonoBehaviour
             if(natureOccupiedOctants >= 4)
             {
                 ended = true;
-                sceneLoader.ReloadScene(winString);
+                SceneLoader.Instance.ReloadScene(winString);
             }
             else if(natureOccupiedOctants == 0)
             {
                 ended = true;
-                sceneLoader.ReloadScene(loseString);
+                SceneLoader.Instance.ReloadScene(loseString);
             }
         }
     }

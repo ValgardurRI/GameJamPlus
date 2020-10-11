@@ -6,10 +6,23 @@ using TMPro;
 
 public class SceneLoader : MonoBehaviour
 {
+    private static SceneLoader _instance;
+    public static SceneLoader Instance => _instance;
     [SerializeField] float fadeOutTime = 1f;
     [SerializeField] float fadeInTime = 1f;
     [SerializeField] float waitTime = 0.5f;
 
+    void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+        }    
+        else
+        {
+            _instance = this;
+        }
+    }
     int sceneToLoad;
 
     public void LoadNextScene()
@@ -27,39 +40,22 @@ public class SceneLoader : MonoBehaviour
     public void ReloadScene(string text = null)
     {
         sceneToLoad = SceneManager.GetActiveScene().buildIndex;
-        if(text == null)
-            StartCoroutine(LoadScene(sceneToLoad));
-        else
-            StartCoroutine(LoadSceneWithText(sceneToLoad, text));
+        StartCoroutine(LoadScene(sceneToLoad, text));
     }
 
-    private IEnumerator LoadScene(int sceneIndex)
+    private IEnumerator LoadScene(int sceneIndex, string text = null)
     {
-
         Fader fader = FindObjectOfType<Fader>();
+        var restartMessage = GameObject.Find("RestartMessage").GetComponentInChildren<TextMeshProUGUI>();
+        restartMessage.text = text;
+
+        DontDestroyOnLoad(restartMessage.gameObject);
         DontDestroyOnLoad(gameObject);
 
         yield return fader.FadeOut(fadeOutTime);
         yield return SceneManager.LoadSceneAsync(sceneIndex);
         yield return new WaitForSeconds(waitTime);
         yield return fader.FadeIn(fadeInTime);
-
-        Destroy(gameObject);
-    }
-
-    private IEnumerator LoadSceneWithText(int sceneIndex, string text)
-    {
-        Fader fader = FindObjectOfType<Fader>();
-        GameObject.Find("RestartMessage").GetComponentInChildren<TextMeshProUGUI>().text = text;
-        
-        DontDestroyOnLoad(gameObject);
-
-        yield return fader.FadeOut(fadeOutTime);
-        yield return SceneManager.LoadSceneAsync(sceneIndex);
-        yield return new WaitForSeconds(waitTime);
-        yield return fader.FadeIn(fadeInTime);
-
-        Destroy(gameObject);
     }
 
 
