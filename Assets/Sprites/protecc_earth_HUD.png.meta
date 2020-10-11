@@ -1,16 +1,34 @@
 fileFormatVersion: 2
-guid: d776936e48ef844f09934f6fcd709c45
+guid: 0fb6fdc7c1bce53489321eb9be628be2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4871997685502959340
-    second: protecc_earth_wastelandcity_0
+      213: 845498277354656641
+    second: protecc_earth_HUD_0
   - first:
-      213: -4437563834840910322
-    second: protecc_earth_wastelandcity_1
+      213: 4078624987295871582
+    second: protecc_earth_HUD_1
   - first:
-      213: -3682638232710254440
-    second: protecc_earth_wastelandcity_2
+      213: 2904271600659660394
+    second: protecc_earth_HUD_2
+  - first:
+      213: 586127641530838403
+    second: protecc_earth_HUD_3
+  - first:
+      213: 2871844327017191462
+    second: protecc_earth_HUD_4
+  - first:
+      213: -814054434193372676
+    second: protecc_earth_HUD_5
+  - first:
+      213: -2981422968833177576
+    second: protecc_earth_HUD_6
+  - first:
+      213: 7280596068469715361
+    second: protecc_earth_HUD_7
+  - first:
+      213: 6068867470105603707
+    second: protecc_earth_HUD_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -132,13 +150,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: protecc_earth_wastelandcity_0
+      name: protecc_earth_HUD_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 0
-        width: 62
-        height: 60
+        y: 82
+        width: 13
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +164,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41122110bef236cb0800000000000000
-      internalID: -4871997685502959340
+      spriteID: 183ddef1430dbbb00800000000000000
+      internalID: 845498277354656641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protecc_earth_wastelandcity_1
+      name: protecc_earth_HUD_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
+        y: 82
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e527dc301df2a9830800000000000000
+      internalID: 4078624987295871582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_HUD_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ef29022ab0e4820800000000000000
+      internalID: 2904271600659660394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_HUD_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dab7a0cf7522800800000000000000
+      internalID: 586127641530838403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_HUD_4
+      rect:
+        serializedVersion: 2
+        x: 1
         y: 64
         width: 15
-        height: 12
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +248,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e06ff24143b9a62c0800000000000000
-      internalID: -4437563834840910322
+      spriteID: 62894122337dad720800000000000000
+      internalID: 2871844327017191462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protecc_earth_wastelandcity_2
+      name: protecc_earth_HUD_5
       rect:
         serializedVersion: 2
-        x: 2
+        x: 17
         y: 64
-        width: 11
-        height: 32
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,8 +269,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 890780fe904a4ecc0800000000000000
-      internalID: -3682638232710254440
+      spriteID: cf9821e1ec5e3b4f0800000000000000
+      internalID: -814054434193372676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_HUD_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81802892b9bdf96d0800000000000000
+      internalID: -2981422968833177576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_HUD_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a13e3ecc8fd90560800000000000000
+      internalID: 7280596068469715361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_HUD_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e61905fc2f83450800000000000000
+      internalID: 6068867470105603707
       vertices: []
       indices: 
       edges: []
@@ -197,7 +341,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 18320c5d6000fec4da5d1e4f77c318de
+    spriteID: ddcdd6694c219c34a8d8c7679647d65a
     internalID: 0
     vertices: []
     indices: 

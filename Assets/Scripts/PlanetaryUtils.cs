@@ -10,20 +10,6 @@ public static class PlanetaryUtils
         return distance;
     }
 
-    /*
-    public static float SignedPlanetaryDistance(float angle1, float angle2)
-    {
-        var diff = angle1 - angle2;
-        
-        if(Mathf.Abs(diff) < Mathf.Abs(diff + 360) && Mathf.Abs(diff) < Mathf.Abs(diff - 360))
-            return diff;
-        else if(Mathf.Abs(diff + 360) < Mathf.Abs(diff - 360))
-            return diff + 360;
-        else
-            return diff - 360;
-    }
-    */
-
     public static float PlanetaryDistance(float alpha, float beta)
     {
         float phi = Mathf.Abs(beta - alpha) % 360;       // This is either the distance or 360 - distance
