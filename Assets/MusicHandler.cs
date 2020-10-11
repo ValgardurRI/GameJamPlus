@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class MusicHandler : MonoBehaviour
 {
+    public static MusicHandler Instance => _instance;
+    public static MusicHandler _instance;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

@@ -12,6 +12,12 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] float fadeInTime = 1f;
     [SerializeField] float waitTime = 0.5f;
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+            QuitGame();    
+    }
+
     void Awake()
     {
         if(Instance != null)
@@ -46,10 +52,13 @@ public class SceneLoader : MonoBehaviour
     private IEnumerator LoadScene(int sceneIndex, string text = null)
     {
         Fader fader = FindObjectOfType<Fader>();
-        var restartMessage = GameObject.Find("RestartMessage").GetComponentInChildren<TextMeshProUGUI>();
-        restartMessage.text = text;
 
-        DontDestroyOnLoad(restartMessage.gameObject);
+        if(text != null)
+        {
+            var restartMessage = GameObject.Find("RestartMessage").GetComponentInChildren<TextMeshProUGUI>();
+            restartMessage.text = text;
+        }
+
         DontDestroyOnLoad(gameObject);
 
         yield return fader.FadeOut(fadeOutTime);
