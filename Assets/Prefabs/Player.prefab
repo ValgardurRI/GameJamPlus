@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7278029518750844924}
   - component: {fileID: 91508624862326863}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.02}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1471151845253477281}
   m_Father: {fileID: 7119278770471977958}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
@@ -183,4 +184,97 @@ MonoBehaviour:
   Acceleration: 1
   Friction: 1.5
   Team: 0
+  RangedPlantPrefab: {fileID: 0}
+  MeleePlantPrefab: {fileID: 0}
+  ForestationPlantPrefab: {fileID: 0}
   movementDirection: 0
+--- !u!1001 &6608957247636224396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8011368058175801744}
+    m_Modifications:
+    - target: {fileID: 5754807948818237992, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_Name
+      value: Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754807948818237998, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+        type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2fe5c5e31f4994fb7a99411e0d6388db, type: 3}
+--- !u!4 &1471151845253477281 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5754807948818237997, guid: 2fe5c5e31f4994fb7a99411e0d6388db,
+    type: 3}
+  m_PrefabInstance: {fileID: 6608957247636224396}
+  m_PrefabAsset: {fileID: 0}

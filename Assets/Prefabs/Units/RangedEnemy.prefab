@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d66c8542072bc42a921e50966a424a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExplosionVFX: {fileID: 268872583895314383, guid: b8d9e9b86ea494aa9a4dda829d03d729,
+  ExplosionVFX: {fileID: 268872583895314383, guid: 44e73689d9f614e88b0488e215f7dbaf,
     type: 3}
   AttackRange: 20
   Speed: 7
