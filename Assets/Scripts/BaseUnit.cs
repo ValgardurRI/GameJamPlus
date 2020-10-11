@@ -22,10 +22,12 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
     protected float velocity = 0;
     protected float attackCooldown = 0f;
     protected float targetCheckTimer = 0f;
+    protected Animator animator;
     
     // When using Unity Events, call base function before
     public virtual void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         currentHealth = MaxHealth;
         SetPosition(StartPosition);
         target = GetClosestTarget();
@@ -86,7 +88,11 @@ public abstract class BaseUnit : PlanetCharacter, IDamageable
         return PlanetaryDirection(Rotation, target.GetPlanetaryPosition());
     }
 
-    protected abstract void Attack();
+    protected virtual void Attack()
+    {
+        animator.SetTrigger("AttackTrigger");
+    }
+
     protected IDamageable GetClosestTarget(Func<IDamageable, bool> filter = null)
     {
         Transform unitTransform = Team == Team.Nature ? Planet.Instance.RobotUnits : Planet.Instance.NatureUnits;
