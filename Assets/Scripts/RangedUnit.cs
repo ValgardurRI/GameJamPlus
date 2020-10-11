@@ -24,6 +24,7 @@ public class RangedUnit : BaseUnit
     {
         if(attackCooldown == 0)
         {
+            base.Attack();
             var projectile = Instantiate(projectilePrefab, Planet.Instance.transform);
             projectile.SetPosition(Rotation);
             projectile.Setup(TargetDirection(), Team);

@@ -20,6 +20,7 @@ public class MeleeUnit : BaseUnit
     {
         if(attackCooldown == 0)
         {
+            base.Attack();
             target.TakeDamage(AttackDamage, Rotation);
             attackCooldown = SecondsPerAttack;
         }

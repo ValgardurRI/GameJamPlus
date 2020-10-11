@@ -79,4 +79,23 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
         }
     }
 
+    public void PlantForestation()
+    {
+
+    }
+
+    public void PlantMelee()
+    {
+
+    }
+
+    public void PlantTurret()
+    {
+
+    }
+
+    public void Attack()
+    {
+        
+    }
 }

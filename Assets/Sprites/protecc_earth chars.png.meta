@@ -32,6 +32,78 @@ TextureImporter:
   - first:
       213: -427537850205553029
     second: protecc_earth chars_9
+  - first:
+      213: 6096670903425985528
+    second: protecc_earth chars_0
+  - first:
+      213: 189887416466865092
+    second: protecc_earth chars_1
+  - first:
+      213: 2907874342764061429
+    second: protecc_earth chars_2
+  - first:
+      213: 4382334995712123128
+    second: protecc_earth chars_3
+  - first:
+      213: -29670760906978874
+    second: protecc_earth chars_4
+  - first:
+      213: -7181776638467187116
+    second: protecc_earth chars_5
+  - first:
+      213: -2024703094947350983
+    second: protecc_earth chars_6
+  - first:
+      213: -262390054708353860
+    second: protecc_earth chars_7
+  - first:
+      213: -655410525932638557
+    second: protecc_earth chars_8
+  - first:
+      213: 1699012504322209378
+    second: protecc_earth chars_9
+  - first:
+      213: 3991226157817068657
+    second: protecc_earth chars_10
+  - first:
+      213: -4998308378735006113
+    second: protecc_earth chars_11
+  - first:
+      213: -1436784661536201662
+    second: protecc_earth chars_12
+  - first:
+      213: 5853408796675584308
+    second: protecc_earth chars_13
+  - first:
+      213: 796499231999166255
+    second: protecc_earth chars_14
+  - first:
+      213: -6449408663983243175
+    second: protecc_earth chars_15
+  - first:
+      213: -4546001581471487145
+    second: protecc_earth chars_16
+  - first:
+      213: -6541759412772234914
+    second: protecc_earth chars_17
+  - first:
+      213: -4786874234312979502
+    second: protecc_earth chars_18
+  - first:
+      213: 1431548896131180322
+    second: protecc_earth chars_19
+  - first:
+      213: -8623728740200368101
+    second: protecc_earth chars_20
+  - first:
+      213: -3060483766225842887
+    second: protecc_earth chars_21
+  - first:
+      213: 1670686562906633019
+    second: protecc_earth chars_22
+  - first:
+      213: 38197652880909275
+    second: protecc_earth chars_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -167,8 +239,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f961009de581df40800000000000000
-      internalID: 5751525454498589169
+      spriteID: 8fb6a2792e9bb9450800000000000000
+      internalID: 6096670903425985528
       vertices: []
       indices: 
       edges: []
@@ -188,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c8b199685c84c2b0800000000000000
-      internalID: -5565168928166922048
+      spriteID: 4cbf2d5699d92a200800000000000000
+      internalID: 189887416466865092
       vertices: []
       indices: 
       edges: []
@@ -209,8 +281,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e78ece16c4967d540800000000000000
-      internalID: 5032606885391165566
+      spriteID: 5f2ace3ee48da5820800000000000000
+      internalID: 2907874342764061429
       vertices: []
       indices: 
       edges: []
@@ -230,8 +302,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 384d85ad1355a6150800000000000000
-      internalID: 5866595137208505475
+      spriteID: 8f02f22c57e21dc30800000000000000
+      internalID: 4382334995712123128
       vertices: []
       indices: 
       edges: []
@@ -251,8 +323,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b91e113185b2d9310800000000000000
-      internalID: 1413333515341259163
+      spriteID: 6c98ce3a996969ff0800000000000000
+      internalID: -29670760906978874
       vertices: []
       indices: 
       edges: []
@@ -272,14 +344,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c22c1bfd157601ae0800000000000000
-      internalID: -1580649867864063444
+      spriteID: 45ed6ffa234355c90800000000000000
+      internalID: -7181776638467187116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: protecc_earth chars_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9367702334fc6e3e0800000000000000
+      internalID: -2024703094947350983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4638ca2adcb5cf0800000000000000
+      internalID: -262390054708353860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_8
       rect:
         serializedVersion: 2
         x: 0
@@ -293,14 +407,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1145ca6e6028ef400800000000000000
-      internalID: 359867986387686417
+      spriteID: 3aeabb3699387e6f0800000000000000
+      internalID: -655410525932638557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protecc_earth chars_7
+      name: protecc_earth chars_9
       rect:
         serializedVersion: 2
         x: 16
@@ -314,14 +428,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6ec0b24f251dfc90800000000000000
-      internalID: -7134522941958467988
+      spriteID: 2667215feda149710800000000000000
+      internalID: 1699012504322209378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protecc_earth chars_8
+      name: protecc_earth chars_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cfeea4b0fa36730800000000000000
+      internalID: 3991226157817068657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e24aff20172aab0800000000000000
+      internalID: -4998308378735006113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244a76676f38f0ce0800000000000000
+      internalID: -1436784661536201662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431bef2b94c7b3150800000000000000
+      internalID: 5853408796675584308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f278e2bd4dbbd0b00800000000000000
+      internalID: 796499231999166255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950c3f39df81f76a0800000000000000
+      internalID: -6449408663983243175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth chars_16
       rect:
         serializedVersion: 2
         x: 32
@@ -335,14 +575,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ace90e42deafa27a0800000000000000
-      internalID: -6401028023920845110
+      spriteID: 75b270cb5ab59e0c0800000000000000
+      internalID: -4546001581471487145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protecc_earth chars_9
+      name: protecc_earth chars_17
       rect:
         serializedVersion: 2
         x: 48
@@ -356,8 +596,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7eb6762794111af0800000000000000
-      internalID: -427537850205553029
+      spriteID: e5994ab49700735a0800000000000000
+      internalID: -6541759412772234914
       vertices: []
       indices: 
       edges: []
