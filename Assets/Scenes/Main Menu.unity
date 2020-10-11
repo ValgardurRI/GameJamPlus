@@ -505,16 +505,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8639340191795888912, guid: 950e5f0e23ee34a6f8b42da6431f1df7,
-        type: 3}
-      propertyPath: fadeOutTime
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8639340191795888912, guid: 950e5f0e23ee34a6f8b42da6431f1df7,
-        type: 3}
-      propertyPath: waitTime
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 8639340192149750474, guid: 950e5f0e23ee34a6f8b42da6431f1df7,
         type: 3}
       propertyPath: m_LocalPosition.x
