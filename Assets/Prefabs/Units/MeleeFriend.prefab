@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9060871462457850573}
   - component: {fileID: 9060871462457850572}
   - component: {fileID: 5755910400609297505}
+  - component: {fileID: 8939544330720430474}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9060871462457850562}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 9060871462754714265}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &9060871462457850572
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 359867986387686417, guid: 8249ab30f27c1d54384bb347f5243f6f, type: 3}
+  m_Sprite: {fileID: 1413333515341259163, guid: 8249ab30f27c1d54384bb347f5243f6f,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,6 +100,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.0000019073486}
   m_Size: {x: 0.16, y: 0.16000007}
   m_Direction: 0
+--- !u!95 &8939544330720430474
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9060871462457850562}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46144f6121d544fe5a4ab7bb08ec5d31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9060871462754714270
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9060871462754714270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.53160024}
+  m_LocalPosition: {x: 0, y: -0.15, z: -0.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9060871462457850573}
