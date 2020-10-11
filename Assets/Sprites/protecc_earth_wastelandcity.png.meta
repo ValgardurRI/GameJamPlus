@@ -1,12 +1,63 @@
 fileFormatVersion: 2
 guid: d776936e48ef844f09934f6fcd709c45
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4871997685502959340
+    second: protecc_earth_wastelandcity_0
+  - first:
+      213: -4437563834840910322
+    second: protecc_earth_wastelandcity_1
+  - first:
+      213: -3682638232710254440
+    second: protecc_earth_wastelandcity_2
+  - first:
+      213: -5364498887685825130
+    second: protecc_earth_wastelandcity_3
+  - first:
+      213: 3079865844511275958
+    second: protecc_earth_wastelandcity_4
+  - first:
+      213: -148812576177205154
+    second: protecc_earth_wastelandcity_5
+  - first:
+      213: 8904017265245721122
+    second: protecc_earth_wastelandcity_6
+  - first:
+      213: -6005695360692988569
+    second: protecc_earth_wastelandcity_7
+  - first:
+      213: -7512315169803990958
+    second: protecc_earth_wastelandcity_8
+  - first:
+      213: -2322420546434189716
+    second: protecc_earth_wastelandcity_9
+  - first:
+      213: -1415137120680764712
+    second: protecc_earth_wastelandcity_10
+  - first:
+      213: 1972153781225342076
+    second: protecc_earth_wastelandcity_11
+  - first:
+      213: -3082485303796646726
+    second: protecc_earth_wastelandcity_12
+  - first:
+      213: -6410041104641105764
+    second: protecc_earth_wastelandcity_13
+  - first:
+      213: 6171192561141182195
+    second: protecc_earth_wastelandcity_14
+  - first:
+      213: 6223030006194398402
+    second: protecc_earth_wastelandcity_15
+  - first:
+      213: -3842898458412107736
+    second: protecc_earth_wastelandcity_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +82,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: 2
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +100,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -64,7 +115,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -76,7 +127,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,11 +172,74 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: protecc_earth_wastelandcity_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41122110bef236cb0800000000000000
+      internalID: -4871997685502959340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_wastelandcity_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890780fe904a4ecc0800000000000000
+      internalID: -3682638232710254440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protecc_earth_wastelandcity_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d12891fa87d85b0800000000000000
+      internalID: -5364498887685825130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cbd36f65709774a9aa1e8a0cfee749a7
     internalID: 0
     vertices: []
     indices: 

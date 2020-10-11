@@ -27,25 +27,27 @@ public class RangedProjectile : PlanetCharacter, IChildCollidable
         else
             timeLeft -= Time.deltaTime;
         
-        yVelocity -= YDropoff*Time.deltaTime;
-        transform.GetChild(0).Translate(Vector3.down*yVelocity*Time.deltaTime);
+        //yVelocity -= YDropoff*Time.deltaTime;
+        //transform.GetChild(0).Translate(Vector3.back*yVelocity*Time.deltaTime);
 
         Move(Speed*direction);
     }
 
     public void Collision(Collider2D col)
     {
-        var damageable = col.transform.GetComponent<IDamageable>(); 
+        var damageable = col.attachedRigidbody.transform.GetComponent<IDamageable>(); 
         if(damageable != null)
         {
             if(damageable.GetTeam() != Team)
             {
+                Debug.Log(damageable.GetTransform().name);
                 damageable.TakeDamage(AttackDamage, Rotation);
                 Destroy(gameObject);
             }
         }
         else
         {
+            Debug.Log(col.transform.name);
             Destroy(gameObject);
         }
     }
