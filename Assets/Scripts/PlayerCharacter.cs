@@ -13,6 +13,7 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     public float Friction = 10;
     public Team Team;
     float velocity = 0;
+    [SerializeField]
     private float movementDirection = 0;
     private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
     // Update is called once per frame
     void Update()
     {
+        movementDirection = Input.GetAxisRaw("Horizontal");
         if(movementDirection != 0)
         {
             // If the character registers movement, add acceleration
@@ -50,17 +52,9 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
     }
 
-    public void OnMove(InputValue value)
-    {
-        // Read value from control. The type depends on what type of controls.
-        // the action is bound to.
-        movementDirection = value.Get<Vector2>().x;
-
-    }
-
     public void TakeDamage(float value, float sourceRotation)
     {
-        velocity -= value*5* PlanetaryUtils.PlanetaryDirection(Rotation, sourceRotation);
+        //velocity -= value*PlanetaryUtils.PlanetaryDirection(Rotation, sourceRotation);
     }
 
     public Team GetTeam()
@@ -79,14 +73,9 @@ public class PlayerCharacter : PlanetCharacter, IDamageable
 
     void SetSpriteDirection()
     {
-        if (velocity > 0)
+        if(velocity != 0)
         {
-            spriteRenderer.flipX = false;
-        }
-        else if (velocity < 0)
-        {
-            spriteRenderer.flipX = true;
-
+            spriteRenderer.flipX = velocity > 0;
         }
     }
 
