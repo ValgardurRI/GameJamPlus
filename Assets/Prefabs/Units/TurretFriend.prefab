@@ -290,6 +290,9 @@ MonoBehaviour:
   MaxHealth: 100
   AttackDamage: 10
   SecondsPerAttack: 3
+  Acceleration: 5
+  Friction: 5
+  KnockbackWeight: 100
   Team: 0
   targetTransform: {fileID: 0}
   projectilePrefab: {fileID: 1779294635857460958, guid: 09e93f147ab6a429784ad34490394804,

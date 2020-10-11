@@ -179,9 +179,11 @@ MonoBehaviour:
   AttackRange: 2
   Speed: 10
   MaxHealth: 100
-  StartPosition: 90
   AttackDamage: 30
   SecondsPerAttack: 1
+  Acceleration: 5
+  Friction: 10
+  KnockbackWeight: 1
   Team: 0
   targetTransform: {fileID: 0}
 --- !u!50 &2053536289506857694
