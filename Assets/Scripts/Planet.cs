@@ -40,7 +40,7 @@ public class Planet : MonoBehaviour
     {
         int rotationToOctant(float rotation)
         {
-            var val = Mathf.FloorToInt(rotation/90);
+            var val = Mathf.FloorToInt((rotation + 22.5f)/45) % 8;
             Debug.Log(val);
             return val;
         }
